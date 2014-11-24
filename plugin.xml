@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="com.symbol.emdk"
+      version="0.1.0">
+    <name>Symbol EMDK Plugin</name>
+
+
+    <js-module src="www/emdk.js" name="SymbolEMDK">
+        <clobbers target="emdk" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SymbolEMDK" >
+                <param name="android-package" value="com.symbol.emdk.plugin.SymbolEMDKPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/com/symbol/emdk/plugin/SymbolEMDKPlugin.java" target-dir="src/com/symbol/emdk/plugin" />
+        <source-file src="src/android/libs/com.symbol.emdkwizard_3.0.2.jar" target-dir="libs" />
+    </platform>
+
+</plugin>
+
+

@@ -18,6 +18,8 @@
             </feature>
         </config-file>
         <source-file src="src/android/com/symbol/emdk/plugin/SymbolEMDKPlugin.java" target-dir="src/com/symbol/emdk/plugin" />
+        <source-file src="src/android/libs/com.symbol.emdk.jar" target-dir="libs" />
+        
     </platform>
 
 </plugin>
